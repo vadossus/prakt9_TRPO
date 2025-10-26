@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="PrimaryColor">#964312</Color>
+    <Color x:Key="PrimaryHoverColor">#b85318</Color>
+    <Color x:Key="PrimaryPressedColor">#eb7936</Color>
+
+    <Color x:Key="SuccessColor">#beeb36</Color>
+    <Color x:Key="SuccessHoverColor">#a5cc31</Color>
+    <Color x:Key="SuccessPressedColor">#98bd2b</Color>
+
+    <Color x:Key="DangerColor">#99113a</Color>
+    <Color x:Key="DangerHoverColor">#850d31</Color>
+    <Color x:Key="DangerPressedColor">#5c0721</Color>
+
+    <Color x:Key="WindowBackground">#1E1E1E</Color>
+    <Color x:Key="TextColor">#FFFFFF</Color>
+    <Color x:Key="BorderColor">#404040</Color>
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="PrimaryHoverBrush" Color="{DynamicResource PrimaryHoverColor}"/>
+    <SolidColorBrush x:Key="PrimaryPressedBrush" Color="{DynamicResource PrimaryPressedColor}"/>
+
+    <SolidColorBrush x:Key="SuccessBrush" Color="{DynamicResource SuccessColor}"/>
+    <SolidColorBrush x:Key="SuccessHoverBrush" Color="{DynamicResource SuccessHoverColor}"/>
+    <SolidColorBrush x:Key="SuccessPressedBrush" Color="{DynamicResource SuccessPressedColor}"/>
+
+    <SolidColorBrush x:Key="DangerBrush" Color="{DynamicResource DangerColor}"/>
+    <SolidColorBrush x:Key="DangerHoverBrush" Color="{DynamicResource DangerHoverColor}"/>
+    <SolidColorBrush x:Key="DangerPressedBrush" Color="{DynamicResource DangerPressedColor}"/>
+
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource WindowBackground}"/>
+    <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="{DynamicResource BorderColor}"/>
+</ResourceDictionary>

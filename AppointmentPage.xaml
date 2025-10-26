@@ -1,0 +1,95 @@
+﻿<Page x:Class="PacientApp1.AppointmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PacientApp1"
+      mc:Ignorable="d"
+      Title="AppointmentPage" Height="578" Width="869">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Style="{StaticResource BaseBorderStyle}">
+            <StackPanel>
+                <Label Content="Информация о пациенте" Style="{StaticResource SectionLabelStyle}"/>
+                <StackPanel Style="{StaticResource FormStackPanelStyle}">
+                    <TextBlock Text="ID: " FontWeight="Bold"/>
+                    <TextBlock Text="{Binding CurrentPatient.Id}"/>
+                    <TextBlock Text="   ФИО: " FontWeight="Bold"/>
+                    <TextBlock Text="{Binding CurrentPatient.LastName}"/>
+                    <TextBlock Text=" "/>
+                    <TextBlock Text="{Binding CurrentPatient.Name}"/>
+                    <TextBlock Text=" "/>
+                    <TextBlock Text="{Binding CurrentPatient.MiddleName}"/>
+                </StackPanel>
+                <StackPanel Style="{StaticResource FormStackPanelStyle}">
+                    <TextBlock Text="Дата рождения: " FontWeight="Bold"/>
+                    <TextBlock Text="{Binding CurrentPatient.Birthday}"/>
+                    <TextBlock Text="   Телефон: " FontWeight="Bold"/>
+                    <TextBlock Text="{Binding CurrentPatient.PhoneNumber}"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Style="{StaticResource BaseBorderStyle}">
+                <StackPanel>
+                    <Label Content="История приемов" Style="{StaticResource SectionLabelStyle}"/>
+                    <ListView ItemsSource="{Binding CurrentPatient.AppointmentStories}"
+                              ScrollViewer.VerticalScrollBarVisibility="Auto"
+                              Style="{StaticResource BaseListViewStyle}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="LightGray" BorderThickness="0,0,0,1" Padding="5">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Date}" FontWeight="Bold" FontSize="12"/>
+                                        <TextBlock Text="{Binding Diagnosis}" FontWeight="SemiBold"/>
+                                        <TextBlock Text="{Binding Recommendations}" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding DoctorName, StringFormat='ФИО врача: {0}'}" FontSize="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Style="{StaticResource BaseBorderStyle}">
+                <StackPanel>
+                    <Label Content="Новый прием" Style="{StaticResource SectionLabelStyle}"/>
+
+                    <StackPanel>
+                        <Label Content="Диагноз" Style="{StaticResource BaseLabelStyle}"/>
+                        <TextBox x:Name="DiagnosisTextBox" Height="80" TextWrapping="Wrap"
+                                Text="{Binding NewAppointment.Diagnosis, Mode=TwoWay}"
+                                Style="{StaticResource BaseTextBoxStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Label Content="Рекомендации" Style="{StaticResource BaseLabelStyle}"/>
+                        <TextBox x:Name="RecommendationsTextBox" Height="120" TextWrapping="Wrap"
+                                Text="{Binding NewAppointment.Recommendations, Mode=TwoWay}"
+                                Style="{StaticResource BaseTextBoxStyle}"/>
+                    </StackPanel>
+
+                    <Button Content="Сохранить прием" Style="{StaticResource AddButtonStyle}" Click="SaveAppointment_Click"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Style="{StaticResource ButtonPanelStyle}">
+            <Button Content="Изменить информацию о пациенте" Style="{StaticResource StandardButtonStyle}" Click="EditPatient_Click"/>
+            <Button Content="Назад" Style="{StaticResource StandardButtonStyle}" Click="BackBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
