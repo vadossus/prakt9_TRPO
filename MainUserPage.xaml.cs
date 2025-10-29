@@ -27,6 +27,7 @@ namespace PacientApp1
         public Doctor CurrentDoctor => App.CurrentDoctor;
         public Patient SelectedPatient { get; set; }
 
+
         public MainUserPage()
         {
             InitializeComponent();
@@ -69,6 +70,16 @@ namespace PacientApp1
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void DeletePatientBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedPatient != null)
+            {
+                var selectedPatient = PatientsListView.SelectedItem as Patient;
+                Patients.Remove(selectedPatient);
+                App.DeletePatient(selectedPatient);
+            }
         }
     }
 }

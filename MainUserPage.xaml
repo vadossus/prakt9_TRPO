@@ -41,6 +41,7 @@
             <Button Content="Начать прием" Style="{StaticResource StandardButtonStyle}" Click="Appointment_Click"/>
             <Button Content="Изменить информацию" Style="{StaticResource StandardButtonStyle}" Click="EditInfo_Click"/>
             <Button Content="Назад" Style="{StaticResource StandardButtonStyle}" Click="BackBtn_Click"/>
+            <Button Content="Удалить пациента" Style="{DynamicResource DeleteButtonStyle}" Click="DeletePatientBtn_Click"/>
         </StackPanel>
 
         <Border Grid.Row="2" Style="{StaticResource BaseBorderStyle}">
@@ -48,7 +49,7 @@
                 <Label Content="Список пациентов" Style="{StaticResource SectionLabelStyle}"/>
                 <ListView x:Name="PatientsListView" 
                           ItemsSource="{Binding Patients}" 
-                          SelectedItem="{Binding SelectedPatient}"
+                          SelectedItem="{Binding SelectedPatient, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                           MouseDoubleClick="PatientsListView_MouseDoubleClick"
                           Style="{StaticResource BaseListViewStyle}">
                     <ListView.ItemTemplate>

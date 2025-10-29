@@ -15,6 +15,7 @@ namespace PacientApp1
         public static Doctor CurrentDoctor { get; set; }
         public static ObservableCollection<Patient> Patients { get; set; } = new ObservableCollection<Patient>();
 
+
         private void Application_Startup(object sender, StartupEventArgs e) {}
 
         public static void LoadPatients()
