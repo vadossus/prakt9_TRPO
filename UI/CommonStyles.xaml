@@ -9,6 +9,8 @@
         <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="BaseLabelStyle" TargetType="Label">
@@ -25,6 +27,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="4"/>
         <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="BasePasswordBoxStyle" TargetType="PasswordBox">
@@ -34,6 +37,8 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="4"/>
         <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style x:Key="BaseComboBoxStyle" TargetType="ComboBox">
@@ -52,6 +57,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="4"/>
         <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="Width" Value="200"/>
     </Style>
 
     <Style x:Key="BaseBorderStyle" TargetType="Border">
@@ -83,6 +89,7 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Margin" Value="0,0,0,20"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 
     <Style x:Key="SectionLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
@@ -123,5 +130,93 @@
         <Setter Property="Margin" Value="0,20,0,0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
+
+
+    <Style x:Key="WhiteBorder" TargetType="Border">
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+
+    <Style x:Key="DiagnosisTextBox" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
+        <Setter Property="Height" Value="80"/>
+    </Style>
+
+    <Style x:Key="RecommendationTextBox" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
+        <Setter Property="Height" Value="120"/>
+    </Style>
+
+    <Style x:Key="CreatePatientLabel" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
+        <Setter Property="Width" Value="150"/>
+    </Style>
+
+    <Style x:Key="CreatePatientTextBox" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
+        <Setter Property="Width" Value="200"/>
+    </Style>
+
+    <Style x:Key="VerticalBaseStackPanel" TargetType="StackPanel" BasedOn="{StaticResource BaseStackPanelStyle}">
+        <Setter Property="Orientation" Value="Vertical"/>
+    </Style>
+
+    <Style x:Key="HorizontalBaseStackPanel" TargetType="StackPanel" BasedOn="{StaticResource BaseStackPanelStyle}">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="LoginPageLabel" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="LoginPageTextBox" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+    </Style>
+
+    <Style x:Key="LoginBaseBorderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}"/>
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="400"/>
+    </Style>
+
+    <Style x:Key="HorizontalStackPanelLogin" TargetType="StackPanel">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="350"/>
+    </Style>
+
+    <Style x:Key="VerticalStackPanelLogin" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="Margin" Value="0,20,0,0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="RegisterLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="RegisterTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource BaseTextBoxStyle}">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="RegisterComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="RegisterPasswordBox" TargetType="PasswordBox" BasedOn="{StaticResource BasePasswordBoxStyle}">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="EditPatientDatePicker" TargetType="DatePicker" BasedOn="{StaticResource BaseDatePickerStyle}">
+        <Setter Property="Width" Value="150"/>
+    </Style>
+    
 
 </ResourceDictionary>

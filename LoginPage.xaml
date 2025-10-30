@@ -8,31 +8,26 @@
       Title="LoginPage">
 
     <Grid Background="{DynamicResource WindowBackgroundBrush}">
-        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" 
-                Padding="30" Background="{DynamicResource WindowBackgroundBrush}"
-                HorizontalAlignment="Center" VerticalAlignment="Center"
-                Width="400">
+        <Border Style="{StaticResource LoginBaseBorderStyle}">
 
-            <StackPanel HorizontalAlignment="Center" Width="350">
-                <Label Content="Вход в систему" Style="{StaticResource HeaderLabelStyle}" 
-                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <StackPanel Style="{StaticResource HorizontalStackPanelLogin}">
+                <Label Content="Вход в систему" Style="{StaticResource HeaderLabelStyle}"/>
 
-                <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Center">
-                    <Label Content="Идентификатор" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <TextBox x:Name="IDTextBox" Width="150" Style="{StaticResource BaseTextBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Идентификатор" Style="{StaticResource LoginPageLabel}"/>
+                    <TextBox x:Name="IDTextBox" Style="{StaticResource LoginPageTextBox}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Center">
-                    <Label Content="Пароль" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <PasswordBox x:Name="PassBox" Width="150" Style="{StaticResource BasePasswordBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Пароль" Style="{StaticResource LoginPageLabel}" />
+                    <PasswordBox x:Name="PassBox" Style="{StaticResource BasePasswordBoxStyle}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical" Margin="0,20,0,0" HorizontalAlignment="Center">
-                    <Button x:Name="LoginBtn" Content="Войти" Width="120" 
+                <StackPanel Style="{StaticResource VerticalStackPanelLogin}">
+                    <Button x:Name="LoginBtn" Content="Войти"
                             Style="{StaticResource StandardButtonStyle}" Click="LoginBtn_Click"/>
-                    <Button x:Name="RegisterBtn" Content="Регистрация" Width="120" 
-                            Style="{StaticResource StandardButtonStyle}" Click="RegisterBtn_Click" 
-                            Margin="0,5,0,0"/>
+                    <Button x:Name="RegisterBtn" Content="Регистрация" 
+                            Style="{StaticResource StandardButtonStyle}" Click="RegisterBtn_Click"/>
                 </StackPanel>
             </StackPanel>
         </Border>

@@ -18,9 +18,9 @@
             <StackPanel>
                 <Label Content="Информация о пациенте" Style="{StaticResource SectionLabelStyle}"/>
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <TextBlock Text="ID: " FontWeight="Bold"/>
+                    <TextBlock Text="ID: "/>
                     <TextBlock Text="{Binding CurrentPatient.Id}"/>
-                    <TextBlock Text="   ФИО: " FontWeight="Bold"/>
+                    <TextBlock Text="   ФИО: "/>
                     <TextBlock Text="{Binding CurrentPatient.LastName}"/>
                     <TextBlock Text=" "/>
                     <TextBlock Text="{Binding CurrentPatient.Name}"/>
@@ -28,9 +28,9 @@
                     <TextBlock Text="{Binding CurrentPatient.MiddleName}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <TextBlock Text="Дата рождения: " FontWeight="Bold"/>
+                    <TextBlock Text="Дата рождения: "/>
                     <TextBlock Text="{Binding CurrentPatient.Birthday}"/>
-                    <TextBlock Text="   Телефон: " FontWeight="Bold"/>
+                    <TextBlock Text="   Телефон: " />
                     <TextBlock Text="{Binding CurrentPatient.PhoneNumber}"/>
                 </StackPanel>
             </StackPanel>
@@ -50,12 +50,12 @@
                               Style="{StaticResource BaseListViewStyle}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Border BorderBrush="LightGray" BorderThickness="0,0,0,1" Padding="5">
+                                <Border Style="{StaticResource WhiteBorder}">
                                     <StackPanel>
-                                        <TextBlock Text="{Binding Date}" FontWeight="Bold" FontSize="12"/>
-                                        <TextBlock Text="{Binding Diagnosis}" FontWeight="SemiBold"/>
-                                        <TextBlock Text="{Binding Recommendations}" TextWrapping="Wrap"/>
-                                        <TextBlock Text="{Binding DoctorName, StringFormat='ФИО врача: {0}'}" FontSize="10"/>
+                                        <TextBlock Text="{Binding Date}"/>
+                                        <TextBlock Text="{Binding Diagnosis}" />
+                                        <TextBlock Text="{Binding Recommendations}"/>
+                                        <TextBlock Text="{Binding DoctorName, StringFormat='ФИО врача: {0}'}"/>
                                     </StackPanel>
                                 </Border>
                             </DataTemplate>
@@ -70,16 +70,16 @@
 
                     <StackPanel>
                         <Label Content="Диагноз" Style="{StaticResource BaseLabelStyle}"/>
-                        <TextBox x:Name="DiagnosisTextBox" Height="80" TextWrapping="Wrap"
+                        <TextBox x:Name="DiagnosisTextBox"
                                 Text="{Binding NewAppointment.Diagnosis, Mode=TwoWay}"
-                                Style="{StaticResource BaseTextBoxStyle}"/>
+                                Style="{StaticResource DiagnosisTextBox}"/>
                     </StackPanel>
 
                     <StackPanel>
                         <Label Content="Рекомендации" Style="{StaticResource BaseLabelStyle}"/>
-                        <TextBox x:Name="RecommendationsTextBox" Height="120" TextWrapping="Wrap"
+                        <TextBox x:Name="RecommendationsTextBox"
                                 Text="{Binding NewAppointment.Recommendations, Mode=TwoWay}"
-                                Style="{StaticResource BaseTextBoxStyle}"/>
+                                Style="{StaticResource RecommendationTextBox}"/>
                     </StackPanel>
 
                     <Button Content="Сохранить прием" Style="{StaticResource AddButtonStyle}" Click="SaveAppointment_Click"/>

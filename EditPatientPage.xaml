@@ -19,33 +19,33 @@
         <Border Grid.Row="1" Style="{StaticResource BaseBorderStyle}">
             <StackPanel>
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <Label Content="ID пациента" Width="150" Style="{StaticResource BaseLabelStyle}"/>
-                    <TextBlock Text="{Binding CurrentPatient.Id}" VerticalAlignment="Center" FontWeight="Bold"/>
+                    <Label Content="ID пациента" Style="{StaticResource CreatePatientLabel}"/>
+                    <TextBlock Text="{Binding CurrentPatient.Id}"/>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <Label Content="Имя" Width="150" Style="{StaticResource BaseLabelStyle}"/>
-                    <TextBox x:Name="NameTextBox" Width="200" Text="{Binding CurrentPatient.Name, Mode=TwoWay}" Style="{StaticResource BaseTextBoxStyle}"/>
+                    <Label Content="Имя" Style="{StaticResource CreatePatientLabel}"/>
+                    <TextBox x:Name="NameTextBox" Text="{Binding CurrentPatient.Name, Mode=TwoWay}" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <Label Content="Фамилия" Width="150" Style="{StaticResource BaseLabelStyle}"/>
-                    <TextBox x:Name="LastNameTextBox" Width="200" Text="{Binding CurrentPatient.LastName, Mode=TwoWay}" Style="{StaticResource BaseTextBoxStyle}"/>
+                    <Label Content="Фамилия" Style="{StaticResource CreatePatientLabel}"/>
+                    <TextBox x:Name="LastNameTextBox" Text="{Binding CurrentPatient.LastName, Mode=TwoWay}" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <Label Content="Отчество" Width="150" Style="{StaticResource BaseLabelStyle}"/>
-                    <TextBox x:Name="MiddleNameTextBox" Width="200" Text="{Binding CurrentPatient.MiddleName, Mode=TwoWay}" Style="{StaticResource BaseTextBoxStyle}"/>
+                    <Label Content="Отчество" Style="{StaticResource CreatePatientLabel}"/>
+                    <TextBox x:Name="MiddleNameTextBox" Text="{Binding CurrentPatient.MiddleName, Mode=TwoWay}" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <Label Content="Дата рождения" Width="150" Style="{StaticResource BaseLabelStyle}"/>
-                    <DatePicker x:Name="BirthdayDatePicker" Width="200" SelectedDateChanged="BirthdayDatePicker_SelectedDateChanged" Style="{StaticResource BaseDatePickerStyle}"/>
+                    <Label Content="Дата рождения" Style="{StaticResource CreatePatientLabel}"/>
+                    <DatePicker x:Name="BirthdayDatePicker" SelectedDateChanged="BirthdayDatePicker_SelectedDateChanged" Style="{StaticResource EditPatientDatePicker}"/>
                 </StackPanel>
 
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <Label Content="Контактный телефон" Width="150" Style="{StaticResource BaseLabelStyle}"/>
-                    <TextBox x:Name="PhoneTextBox" Width="200" Text="{Binding CurrentPatient.PhoneNumber, Mode=TwoWay}" Style="{StaticResource BaseTextBoxStyle}"/>
+                    <Label Content="Контактный телефон" Style="{StaticResource CreatePatientLabel}"/>
+                    <TextBox x:Name="PhoneTextBox" Text="{Binding CurrentPatient.PhoneNumber, Mode=TwoWay}" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
             </StackPanel>
         </Border>

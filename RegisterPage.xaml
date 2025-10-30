@@ -8,33 +8,29 @@
       Title="RegisterPage">
 
     <Grid Background="{DynamicResource WindowBackgroundBrush}">
-        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" 
-                Padding="30" Background="{DynamicResource WindowBackgroundBrush}"
-                HorizontalAlignment="Center" VerticalAlignment="Center"
-                Width="450">
+        <Border Style="{StaticResource LoginBaseBorderStyle}">
 
-            <StackPanel HorizontalAlignment="Center" Width="380">
-                <Label Content="Регистрация пользователя" Style="{StaticResource HeaderLabelStyle}" 
-                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <StackPanel Style="{StaticResource HorizontalStackPanelLogin}">
+                <Label Content="Регистрация пользователя" Style="{StaticResource HeaderLabelStyle}"/>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center">
-                    <Label Content="Имя" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <TextBox x:Name="NameTextBox" Width="150" Style="{StaticResource BaseTextBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Имя" Style="{StaticResource RegisterLabelStyle}"/>
+                    <TextBox x:Name="NameTextBox" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center">
-                    <Label Content="Фамилия" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <TextBox x:Name="LastNameTextBox" Width="150" Style="{StaticResource BaseTextBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Фамилия" Style="{StaticResource RegisterLabelStyle}" />
+                    <TextBox x:Name="LastNameTextBox" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center">
-                    <Label Content="Отчество" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <TextBox x:Name="MiddleNameTextBox" Width="150" Style="{StaticResource BaseTextBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Отчество" Style="{StaticResource RegisterLabelStyle}"/>
+                    <TextBox x:Name="MiddleNameTextBox" Style="{StaticResource RegisterTextBoxStyle}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center">
-                    <Label Content="Специализация" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <ComboBox x:Name="SpecComboBox" Width="150" Style="{StaticResource BaseComboBoxStyle}" VerticalAlignment="Center">
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Специализация" Style="{StaticResource RegisterLabelStyle}"/>
+                    <ComboBox x:Name="SpecComboBox" Style="{StaticResource RegisterComboBoxStyle}">
                         <ComboBoxItem Content="Therapist"/>
                         <ComboBoxItem Content="Doctor"/>
                         <ComboBoxItem Content="Dentist"/>
@@ -42,22 +38,21 @@
                     </ComboBox>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center">
-                    <Label Content="Пароль" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <PasswordBox x:Name="PasswordBox" Width="150" Style="{StaticResource BasePasswordBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Пароль" Style="{StaticResource RegisterLabelStyle}"/>
+                    <PasswordBox x:Name="PasswordBox" Style="{StaticResource RegisterPasswordBox}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center">
-                    <Label Content="Подтверждение" Width="120" Style="{StaticResource BaseLabelStyle}" VerticalAlignment="Center"/>
-                    <PasswordBox x:Name="ConfirmPasswordBox" Width="150" Style="{StaticResource BasePasswordBoxStyle}" VerticalAlignment="Center"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Label Content="Подтверждение" Style="{StaticResource RegisterLabelStyle}"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox" Style="{StaticResource RegisterPasswordBox}"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical" Margin="0,20,0,0" HorizontalAlignment="Center">
-                    <Button x:Name="RegisterBtn" Content="Зарегистрироваться" Width="150" 
-                            Style="{StaticResource AddButtonStyle}" Click="RegisterBtn_Click"/>
-                    <Button x:Name="BackBtn" Content="Назад" Width="150" 
-                            Style="{StaticResource StandardButtonStyle}" Click="BackBtn_Click" 
-                            Margin="0,5,0,0"/>
+                <StackPanel Style="{StaticResource HorizontalBaseStackPanel}">
+                    <Button x:Name="RegisterBtn" Content="Зарегистрироваться" 
+                            Style="{StaticResource RegisterButton}" Click="RegisterBtn_Click"/>
+                    <Button x:Name="BackBtn" Content="Назад" 
+                            Style="{StaticResource RegisterBackButton}" Click="BackBtn_Click"/>
                 </StackPanel>
             </StackPanel>
         </Border>

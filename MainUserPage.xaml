@@ -18,11 +18,11 @@
             <StackPanel>
                 <Label Content="Информация о враче" Style="{StaticResource SectionLabelStyle}"/>
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <TextBlock Text="ID: " FontWeight="Bold"/>
+                    <TextBlock Text="ID: "/>
                     <TextBlock Text="{Binding CurrentDoctor.Id}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <TextBlock Text="ФИО: " FontWeight="Bold"/>
+                    <TextBlock Text="ФИО: "/>
                     <TextBlock Text="{Binding CurrentDoctor.LastName}"/>
                     <TextBlock Text=" "/>
                     <TextBlock Text="{Binding CurrentDoctor.Name}"/>
@@ -30,7 +30,7 @@
                     <TextBlock Text="{Binding CurrentDoctor.MiddleName}"/>
                 </StackPanel>
                 <StackPanel Style="{StaticResource FormStackPanelStyle}">
-                    <TextBlock Text="Специализация: " FontWeight="Bold"/>
+                    <TextBlock Text="Специализация: "/>
                     <TextBlock Text="{Binding CurrentDoctor.Specialisation}"/>
                 </StackPanel>
             </StackPanel>
@@ -54,13 +54,13 @@
                           Style="{StaticResource BaseListViewStyle}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border BorderBrush="LightGray" BorderThickness="0,0,0,1" Padding="8,5">
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{Binding Id}" FontWeight="SemiBold" TextWrapping="Wrap"/>
-                                    <TextBlock Text="{Binding LastName, StringFormat='Фамилия: {0}'}" TextWrapping="Wrap"/>
-                                    <TextBlock Text="{Binding Name, StringFormat='Имя: {0}'}" TextWrapping="Wrap"/>
-                                    <TextBlock Text="{Binding MiddleName, StringFormat='Отчество: {0}'}" TextWrapping="Wrap"/>
-                                    <TextBlock Text="{Binding PhoneNumber, StringFormat='Номер телефона: {0}'}" TextWrapping="Wrap"/>
+                            <Border Style="{StaticResource WhiteBorder}">
+                                <StackPanel Style="{StaticResource VerticalBaseStackPanel}">
+                                    <TextBlock Text="{Binding Id}"/>
+                                    <TextBlock Text="{Binding LastName, StringFormat='Фамилия: {0}'}"/>
+                                    <TextBlock Text="{Binding Name, StringFormat='Имя: {0}'}"/>
+                                    <TextBlock Text="{Binding MiddleName, StringFormat='Отчество: {0}'}"/>
+                                    <TextBlock Text="{Binding PhoneNumber, StringFormat='Номер телефона: {0}'}"/>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
